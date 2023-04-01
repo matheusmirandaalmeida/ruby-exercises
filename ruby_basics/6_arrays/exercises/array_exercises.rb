@@ -70,4 +70,5 @@ end
 
 def join(array, separator)
   # return the result of joining the array with the separator
+    return array.join(separator)
 end
