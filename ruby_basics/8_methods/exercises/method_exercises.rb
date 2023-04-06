@@ -58,8 +58,12 @@ puts lucky_number()
 # explicit return value: 'Input Error' if character's length does not equal 1
 # hint: use String#ord
 
-def ascii_code(caracter)
+def ascii_code(character)
+    return 'input Error' if character.length != 1
+    return character.ord
+end
     
+puts ascii_code("1")
 
 # method name: #pet_pun
 # parameter: animal (a string)
@@ -69,9 +73,26 @@ def ascii_code(caracter)
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
 # hint: use puts
 
+def pet_pun(animal)
+    if animal == 'cat'
+        puts 'Cats are purr-fect!'
+    elsif animal == 'dog'
+        puts 'Dogs are paw-some!'
+    else
+        puts "Caso ao contrario o #{animal} tambem tem potendical!"
+    end
+end
+puts 'qual animal deseja ter?'
+animal = gets.chomp
+puts pet_pun(animal)
 
 # method name: #twenty_first_century?
 # parameter: year (an integer)
 # return value: true if the year is between 2001 - 2100, otherwise return false
 # hint: use Comparable#between?
 
+def twenty_first_century(year)
+    return year.between?(2001, 2100)
+end
+
+puts twenty_first_century(2050)

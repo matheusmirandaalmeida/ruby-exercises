@@ -24,12 +24,13 @@ def increment_greatest_value(nested_array)
   greatest_value = nested_array.flatten.min
   nested_array.each do |array|
     array.each do |current_value|
-      if greatest_value < nil
-        greatest_value = current_value
+        if greatest_value < nil
+          greatest_value = current_value
+        end
       end
-    end
+    endirb
+    greatest_value += 1
   end
-  greatest_value += 1
 end
 
 # This next exercise might look familiar
@@ -42,6 +43,8 @@ def isogram?(string)
   original_length == unique_length
 end
 
+puts isogram?('yes')
+
 # Can you guess what's next?
 # That's right! The final exercise from the lesson, which we'll debug with pry-byebug
 # Try to avoid looking at the problem too much, let's rely on pry to fix it
@@ -49,8 +52,8 @@ end
 # Next insert plenty of breakpoints, and see if you can tell where things break
 # Once you find the error, fix it and get the test to pass
 
-def yell_greeting(string)
-  name = string
-  name = name.downcase
-  greeting = "WASSAP, #{name}!"
-end
+# def yell_greeting(string)
+#   name = string
+#   name = name.downcase
+#   greeting = "WASSAP, #{name}!"
+# end
