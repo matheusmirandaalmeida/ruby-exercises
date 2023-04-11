@@ -26,8 +26,8 @@ puts 'Está tudo em minusculo?'
 puts correct_format?(['matheus', 'caio', 'guilherme'])
 
 def valid_scores?(score_list, perfect_score)
-  # use #one? to return true when only one value in the score_list (hash) is equal to the perfect_score (number)
-  
+  # use #one? to return true when only one value in the score_list (hash) is equal to the perfect_score (number)  
+  score_list.one? { |list,score| score == perfect_score }
 end
-
-
+p valid_scores?({'one' => 1, 'two' => 2}, 1)
+p valid_scores?({'one' => 1, 'three' => 3}, 1)
