@@ -35,5 +35,3 @@ else
   puts "'YOU SHALL NOT PASS!' -Gandalf"
   fml = true
 end
-
-puts("woah") || true
